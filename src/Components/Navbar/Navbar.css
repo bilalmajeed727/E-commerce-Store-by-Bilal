@@ -1,0 +1,138 @@
+.navbar {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 40px;
+  padding: 10px;
+  margin-right: 40px;
+  box-shadow: 0 1px 3px -2px black;
+  height: 70px;
+  border-radius: 10px;
+  align-items: center;
+}
+.logo {
+  width: 120px;
+}
+.cart-icon {
+  width: 40px;
+}
+.nav-manu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 50px;
+  color: #626262;
+  font-size: 20px;
+  font-weight: 500;
+}
+.nav-manu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 3px;
+}
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+.nav-manu hr {
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background: #ff4141;
+}
+.cart button {
+  width: 157px;
+  height: 58px;
+  border-radius: 75px;
+  outline: none;
+  border: 1px solid #7a7a7a;
+  color: #515151;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.cart button:active {
+  background: #ded8d8;
+}
+.cart-count {
+  margin-top: -35px;
+  margin-left: -55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11px;
+  width: 22px;
+  height: 22px;
+  background-color: red;
+  color: white;
+  font-size: 14px;
+}
+.nav-manu link {
+  list-style: none;
+}
+.dropdown-icon {
+  width: 50px;
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 8px 0px;
+    gap: 0;
+    height: 50px;
+  }
+  .nav-logo {
+    transform: scale(0.8);
+  }
+  .dropdown-icon {
+    width: 30px;
+    display: block;
+    rotate: -90deg;
+    transition: 0.5s;
+  }
+
+  .logo {
+    width: 80px;
+  }
+  .nav-manu {
+    display: none;
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    gap: 30px;
+    background-color: white;
+    justify-content: flex-start;
+    align-items: center;
+    top: 50px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .nav-manu-visible {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .dropdown-icon.open {
+    transform: rotate(90deg);
+  }
+  .cart {
+    transform: scale(0.8);
+    gap: 20px;
+  }
+  .cart button {
+    width: 100px;
+    height: 35px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .cart-count {
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+}
